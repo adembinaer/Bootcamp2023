@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.34729.46
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy_Bootcamp2023_Jannick_Leismann", "Udemy_Bootcamp2023_Jannick_Leismann.csproj", "{B9176BDC-0BB3-41F0-AD31-EE83D98A8900}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loops_Raetselspiel", "Loops_Raetselspiel.csproj", "{B9176BDC-0BB3-41F0-AD31-EE83D98A8900}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
