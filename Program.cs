@@ -6,7 +6,8 @@ namespace Udemy_Bootcamp2023_Jannick_Leismann
     {
         static void Main(string[] args)
         {
-            int secretNumber = 3;
+            Random random = new Random();
+            int secretNumber = random.Next(1, 11);
 
             int userGuess = 0;
 
