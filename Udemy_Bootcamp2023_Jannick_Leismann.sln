@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.34729.46
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loops_Raetselspiel", "Loops_Raetselspiel.csproj", "{B9176BDC-0BB3-41F0-AD31-EE83D98A8900}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loops_Raetselspiel", "Loops_Raetselspiel.csproj", "{B9176BDC-0BB3-41F0-AD31-EE83D98A8900}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "34.Übung_Summieren", "..\34.Übung_Summieren\34.Übung_Summieren.csproj", "{B651706C-2B04-4696-9989-64B800A85762}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B9176BDC-0BB3-41F0-AD31-EE83D98A8900}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9176BDC-0BB3-41F0-AD31-EE83D98A8900}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9176BDC-0BB3-41F0-AD31-EE83D98A8900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B651706C-2B04-4696-9989-64B800A85762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B651706C-2B04-4696-9989-64B800A85762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B651706C-2B04-4696-9989-64B800A85762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B651706C-2B04-4696-9989-64B800A85762}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
