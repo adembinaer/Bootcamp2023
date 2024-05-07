@@ -8,30 +8,30 @@ namespace Loops_Raetselspiel
 {
     internal class Program
     {
-        static void Main(string[] args)
-        {
-            int index = 0;
-            int[] numbers = new int[5];
-            int input = 0;
-            int resultArray = 0;
+    //    static void Main(string[] args)
+    //    {
+    //        int index = 0;
+    //        int[] numbers = new int[5];
+    //        int input = 0;
+    //        int resultArray = 0;
 
-            Console.WriteLine("Sie werden mehrmals eine Zahl eingeben müssen \n");
+    //        Console.WriteLine("Sie werden mehrmals eine Zahl eingeben müssen \n");
 
-            while (index < numbers.Length)
-            {
-                Console.WriteLine("Bite gib die " + (index + 1) + " Zahl ein: ");
+    //        while (index < numbers.Length)
+    //        {
+    //            Console.WriteLine("Bite gib die " + (index + 1) + " Zahl ein: ");
 
-                input = int.Parse(Console.ReadLine());
+    //            input = int.Parse(Console.ReadLine());
 
-                numbers[index] = input;
+    //            numbers[index] = input;
 
-                resultArray += input;
+    //            resultArray += input;
 
-                index++;
-            }
+    //            index++;
+    //        }
 
-            Console.WriteLine("\n");
-            Console.WriteLine("Das Resultat Ihrer Eingabe: " + resultArray);
-        }
+    //        Console.WriteLine("\n");
+    //        Console.WriteLine("Das Resultat Ihrer Eingabe: " + resultArray);
+    //    }
     }
 }
