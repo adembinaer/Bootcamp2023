@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loops_Raetselspiel", "Loops
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "34.Übung_Summieren", "..\34.Übung_Summieren\34.Übung_Summieren.csproj", "{B651706C-2B04-4696-9989-64B800A85762}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abschnitt_8_Objektorientiert_Teil1", "..\Abschnitt_8_Objektorientiert_Teil1\Abschnitt_8_Objektorientiert_Teil1.csproj", "{8400B9B5-D139-4A2C-88AC-90E0D0AEBBD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abschnitt_8_Objektorientiert_Teil1", "Abschnitt_8_Objektorientiert_Teil1\Abschnitt_8_Objektorientiert_Teil1.csproj", "{8B2CA346-AE4C-45A2-93A4-E9F019E424AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{B651706C-2B04-4696-9989-64B800A85762}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B651706C-2B04-4696-9989-64B800A85762}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B651706C-2B04-4696-9989-64B800A85762}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8400B9B5-D139-4A2C-88AC-90E0D0AEBBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8400B9B5-D139-4A2C-88AC-90E0D0AEBBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8400B9B5-D139-4A2C-88AC-90E0D0AEBBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8400B9B5-D139-4A2C-88AC-90E0D0AEBBD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B2CA346-AE4C-45A2-93A4-E9F019E424AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B2CA346-AE4C-45A2-93A4-E9F019E424AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B2CA346-AE4C-45A2-93A4-E9F019E424AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B2CA346-AE4C-45A2-93A4-E9F019E424AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
