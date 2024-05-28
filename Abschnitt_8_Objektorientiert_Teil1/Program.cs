@@ -7,6 +7,9 @@ namespace Abschnitt_8_Objektorientiert_Teil1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            Car myCar = new Car();
+            myCar.Honk(); //Methode in Class Car muss Public sein
         }
     }
 }

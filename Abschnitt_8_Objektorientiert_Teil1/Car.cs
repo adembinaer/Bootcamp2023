@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 namespace Abschnitt_8_Objektorientiert_Teil1
 {
     internal class Car
-    {
-        string brand;
-        string model;
-        int year;
+    {   
+        // Standart private -> exces(zugriff) modifer(modifiziere) privat, public , internal
 
-        void Honk()
+        //Diese drei Felder sind initialisiert
+        string brand = "Toyota";
+        string model = "XYZ";
+        int year = 2004;
+
+        public void Honk()
         {
             Console.WriteLine("Das Auto hupt!");
         }
