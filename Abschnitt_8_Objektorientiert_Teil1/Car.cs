@@ -11,5 +11,10 @@ namespace Abschnitt_8_Objektorientiert_Teil1
         string brand;
         string model;
         int year;
+
+        void Honk()
+        {
+            Console.WriteLine("Das Auto hupt!");
+        }
     }
 }
