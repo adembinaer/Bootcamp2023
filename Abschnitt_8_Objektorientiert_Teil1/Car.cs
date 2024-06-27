@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace Abschnitt_8_Objektorientiert_Teil1
 {
     internal class Car
-    {   
+    {
         // Standart private -> exces(zugriff) modifer(modifiziere) privat, public , internal
 
         //Diese drei Felder sind initialisiert
-        string brand = "Toyota";
-        string model = "XYZ";
-        int year = 2004;
+        public string Brand { get; private set; }
+        public string Model { get; private set; }
+        public int Year { get; private set; }
 
         public void Honk()
         {
