@@ -11,7 +11,7 @@ namespace Abschnitt_8_Objektorientiert_Teil1
             myCar.Honk(); //Methode in Class Car muss Public sein. Mit dem Punkt(.Honk()) greiffen wir auf die Felder, Properties, Methoden zu.
             Console.WriteLine(myCar.Brand);
             Console.WriteLine(myCar.Model);
-            Console.WriteLine(myCar.Year);
+            Console.WriteLine("Baujahr " + myCar.Year);
         }
     }
 }
