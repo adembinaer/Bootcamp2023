@@ -15,6 +15,13 @@ namespace Abschnitt_8_Objektorientiert_Teil1
         public string Model { get; private set; }
         public int Year { get; private set; }
 
+
+        public Car(string brand, string model, int year)
+        {
+            Brand = brand;
+            Model = model;
+            Year = year;
+        }
         public void Honk()
         {
             Console.WriteLine("Das Auto hupt!");
