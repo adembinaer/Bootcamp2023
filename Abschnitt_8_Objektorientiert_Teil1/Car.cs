@@ -26,5 +26,10 @@ namespace Abschnitt_8_Objektorientiert_Teil1
         {
             Console.WriteLine("Das Auto hupt!");
         }
+
+        public string GetFullInfo()
+        {         
+            return  $"{Brand} {Model} {Year}";
+        }
     }
 }
