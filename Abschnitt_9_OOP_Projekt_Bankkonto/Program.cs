@@ -22,15 +22,19 @@ namespace Abschnitt_9_OOP_Projekt_Bankkonto
 
                 if(input == "1")
                 {
-
+                    bankAccount.PrintBalance();
                 }
                 else if (input == "2")
                 {
-
+                    Console.WriteLine("Bitte geben Sie den Betrag ein, den Sie einzahlen möchten: ");
+                    float depositAmount = float.Parse(Console.ReadLine()) ;
+                    bankAccount.MakeDeposit(depositAmount);
                 }
                 else if (input == "3")
                 {
-
+                    Console.WriteLine("Bitte geben Sie den Betrag ein, den Sie abheben möchten: ");
+                    float withdrawalAmount = float.Parse(Console.ReadLine());
+                    bankAccount.MakeWithdrawal(withdrawalAmount);             
                 }
                 else if (input == "4")
                 {
