@@ -18,5 +18,27 @@ namespace Abschnitt_9_OOP_Projekt_Bankkonto
             Owner = owner;
             Balance = initialBalance;
         }
+
+        public void MakeDeposit(float amount)
+        {
+            Balance += amount;
+        }
+
+        public void MakeWithdrawal(float amount)
+        {
+            if (Balance >= amount)
+            {
+                Balance -= amount;
+            }
+            else
+            {
+                Console.WriteLine("Unzureichender Saldo");
+            }
+        }
+
+        public void PrintBalance()
+        {
+            Console.WriteLine($"Kontostand von {Owner}: {Balance}"); //{} = Interpolieren
+        }
     }
 }
