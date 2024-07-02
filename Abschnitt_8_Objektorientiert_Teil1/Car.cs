@@ -31,5 +31,12 @@ namespace Abschnitt_8_Objektorientiert_Teil1
         {         
             return  $"{Brand} {Model} {Year}";
         }
+
+        public float CalculateFuelConsumption(int kilometers, float consumptionRate) //Entwicklerwissen! Der Parameter die wir brauchen ist kilometers hardcodiert und somit der Returnwert.
+                                                              //Was will der User, also Verbrauch per KM wissen. Dynamisch macht man es mit float consumptionRate
+        {
+            float consumptionPerKm = 8.0f / 100; //8.0f ersetzen mit consumptionRate Dynamisch
+            return kilometers * consumptionPerKm;
+        }
     }
 }
