@@ -6,10 +6,19 @@ namespace Abschnitt_9_OOP_Projekt_Bankkonto
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Bitte erstellen Sie ein Bankkonto und gehen Schritt für Schritt vor, beginnend mit 1. !");
+            Console.WriteLine("1. Kontonummer");
+            string inputAccount = Console.ReadLine();
+            Console.WriteLine("2. Vorname Name");
+            string inputFirstLastName = Console.ReadLine();
+            Console.WriteLine("3. Kontostand");
+            float initialBalance = float.Parse(Console.ReadLine());
+   
+
             BankAccount bankAccount = new BankAccount(
-                "201508",
-                "Ado J",
-                500);
+                inputAccount, 
+                inputFirstLastName, 
+                initialBalance);
 
             while (true)
             {
