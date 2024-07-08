@@ -7,32 +7,49 @@ namespace Abschnitt_10_Listen
     {
         static void Main(string[] args)
         {
-            int[] numbers = new int[3] { 1, 2, 3 }; //Vergleichen Array vs List
+            //Übung Teil 1
 
-            List<int> ints = new List<int>();
-            // Hizufügen
-            ints.Add(100);
-            ints.Add(-100);
-            ints.Add(500);
+            //int[] numbers = new int[3] { 1, 2, 3 }; //Vergleichen Array vs List
 
-            // Entferne. Die Liste sucht den Wert den man Removen möchte!!! Wert 100 ist ein objektinstanz und ist ein Item kein Index
-            ints.Remove(100);//BOOL
+            //List<int> ints = new List<int>();
+            //// Hizufügen
+            //ints.Add(100);
+            //ints.Add(-100);
+            //ints.Add(500);
 
-            // Clear, alle Elemente auf einmal.
-            ints.Clear(); //VOID
+            //// Entferne. Die Liste sucht den Wert den man Removen möchte!!! Wert 100 ist ein objektinstanz und ist ein Item kein Index
+            //ints.Remove(100);//BOOL
 
-            // Einfügen am Index
-            ints.Insert(1, 500);
+            //// Clear, alle Elemente auf einmal.
+            //ints.Clear(); //VOID
 
-            // Löschen am Index, nur Index angeben.
-            ints.RemoveAt(1);
+            //// Einfügen am Index
+            //ints.Insert(1, 500);
 
-            // Index holen
-            int index = ints.IndexOf(100);// Holt dir den Index wo der Wert im Index hinterlegt ist.
+            //// Löschen am Index, nur Index angeben.
+            //ints.RemoveAt(1);
 
-            // Count
-            int count = ints.Count; // Count ist ein Propertie. Wieviele Elemente in der Liste
+            //// Index holen
+            //int index = ints.IndexOf(100);// Holt dir den Index wo der Wert im Index hinterlegt ist.
 
+            //// Count
+            //int count = ints.Count; // Count ist ein Propertie. Wieviele Elemente in der Liste
+
+
+
+            //Übung Teil 2
+            //List<string> names = new List<string>() { "Jannick", "Ado", "Welli" };
+
+            //Console.WriteLine(names[1]);
+
+            //names.Add("Maria");
+
+            //foreach (string name in names)
+            //{
+            //    Console.WriteLine(name);
+            //}
+
+            //names[1] = "Peter";
 
         }
     }
