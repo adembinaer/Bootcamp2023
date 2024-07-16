@@ -51,6 +51,102 @@ namespace Abschnitt_10_Listen
 
             //names[1] = "Peter";
 
+
+            //// Beispiel 1 Aufgabe NC berechnen
+            //List<Student> students = new List<Student>();
+            ////Practis_Studenten_NC_berechnen_Part1 studentOne = new Practis_Studenten_NC_berechnen_Part1("Jannick", "Leinsmann", 2);
+            ////students.Add(studentOne);
+
+            ////Beispiel 2
+            //students.Add(new Student("Jannick", "Leismann", 2.6f));
+            //students.Add(new Student("Peter", "Müller", 1.8f));
+            //students.Add(new Student("Debora", "Krissler", 2.2f));
+
+            //float totalGradePoints = 0;
+
+            //foreach (Student student in students)
+            //{
+            //    totalGradePoints += student.Nc;
+            //}
+
+            //float averageGradePoint = totalGradePoints / students.Count;
+            //Console.WriteLine("Der durchschnittliche Notenschnitt ist: " + averageGradePoint);
+
+
+
+
+
+            // Eigene Lösung
+
+
+
+            float totalGradeOfPoints = 0;
+            while (true)
+            {
+
+
+
+                Console.WriteLine("Was möchten sie tun?");
+                Console.WriteLine("1. Studenten eingeben");
+                Console.WriteLine("2. Studentenanzahl erreicht, NC-Durchschnitt wird berechnet");
+                Console.WriteLine("3. Programm beenden");
+                string input = Console.ReadLine();
+
+
+                List<Student> studentenList = new List<Student>();
+                studentenList.Add(new Student("aaaaaaa", "bbbbbbbbb", 4f));
+                studentenList.Add(new Student("ccccccc", "dddddddd", 3f));
+                studentenList.Add(new Student("eeeeeee", "ffffffff", 2f));
+                studentenList.Add(new Student("ggggggg", "hhhhhhhh", 1f));
+
+                if (input == "1")
+                {
+                    Console.WriteLine("Bitte Geben Sie den Vornamen ein");
+                    string firstName = Console.ReadLine();
+                    Console.WriteLine("Bitte Geben Sie den Nachnamen ein");
+                    string lastName = Console.ReadLine();
+                    Console.WriteLine("Bitte geben Sie ihren Notendurchschnitt ein");
+                    float nc = float.Parse(Console.ReadLine());
+
+
+
+                    Student studenten = new Student(firstName, lastName, nc);
+
+
+
+                    for (int i = 0; i < studentenList.Count; i++)
+                    {
+
+                    }
+
+                    foreach (Student student in studentenList)//LISTE von kontruktor in foreach!!!???
+                    {
+                        totalGradeOfPoints += student.Nc;
+                    }
+                    //if (input == "2")
+                    //{
+
+
+                    //}
+
+                    //studentenList.Add($"{firstName} {lastName} {nc}"); //Als Info für Add mit ${}
+
+                }
+                else if (input == "2")
+                {
+                    float averageGradePoint2 = totalGradeOfPoints / studentenList.Count;
+                    Console.WriteLine("Der durchschnittliche Notenschnitt ist: " + averageGradePoint2 + "\n");
+                    //studenten.AravangeStudentNc(totalGradeOfPoints, studentenList.Count);
+                }
+                if (input == "3")
+                {
+                    break;
+                }
+
+
+
+
+            }
         }
     }
 }
