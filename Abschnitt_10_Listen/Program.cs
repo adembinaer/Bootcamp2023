@@ -78,20 +78,14 @@ namespace Abschnitt_10_Listen
 
             // Eigene Lösung
 
-
-
             float totalGradeOfPoints = 0;
             while (true)
             {
-
-
-
                 Console.WriteLine("Was möchten sie tun?");
                 Console.WriteLine("1. Studenten eingeben");
                 Console.WriteLine("2. Studentenanzahl erreicht, NC-Durchschnitt wird berechnet");
                 Console.WriteLine("3. Programm beenden");
                 string input = Console.ReadLine();
-
 
                 List<Student> studentenList = new List<Student>();
                 studentenList.Add(new Student("aaaaaaa", "bbbbbbbbb", 4f));
@@ -108,28 +102,14 @@ namespace Abschnitt_10_Listen
                     Console.WriteLine("Bitte geben Sie ihren Notendurchschnitt ein");
                     float nc = float.Parse(Console.ReadLine());
 
-
-
                     Student studenten = new Student(firstName, lastName, nc);
-
-
-
-                    for (int i = 0; i < studentenList.Count; i++)
-                    {
-
-                    }
 
                     foreach (Student student in studentenList)//LISTE von kontruktor in foreach!!!???
                     {
                         totalGradeOfPoints += student.Nc;
                     }
                     Console.WriteLine("Der Notendurchschnitt ergibt: " + studenten.AravangeStudentNc(totalGradeOfPoints, studentenList.Count) + "\n");
-                    //if (input == "2")
-                    //{
-
-
-                    //}
-
+                 
                     //studentenList.Add($"{firstName} {lastName} {nc}"); //Als Info für Add mit ${}
 
                 }
@@ -138,15 +118,13 @@ namespace Abschnitt_10_Listen
                 //    float averageGradePoint2 = totalGradeOfPoints / studentenList.Count;
                 //    Console.WriteLine("Der durchschnittliche Notenschnitt ist: " + averageGradePoint2 + "\n");
 
+
+                //    Console.WriteLine("Der Notendurchschnitt ergibt: " + studenten.AravangeStudentNc(totalGradeOfPoints, studentenList.Count) + "\n"); //Wenn es dynamisch List erzeugt wär
                 //}
                 if (input == "3")
                 {
                     break;
                 }
-
-
-
-
             }
         }
     }
