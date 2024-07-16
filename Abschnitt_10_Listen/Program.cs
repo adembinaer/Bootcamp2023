@@ -123,6 +123,7 @@ namespace Abschnitt_10_Listen
                     {
                         totalGradeOfPoints += student.Nc;
                     }
+                    Console.WriteLine("Der Notendurchschnitt ergibt: " + studenten.AravangeStudentNc(totalGradeOfPoints, studentenList.Count) + "\n");
                     //if (input == "2")
                     //{
 
@@ -132,12 +133,12 @@ namespace Abschnitt_10_Listen
                     //studentenList.Add($"{firstName} {lastName} {nc}"); //Als Info für Add mit ${}
 
                 }
-                else if (input == "2")
-                {
-                    float averageGradePoint2 = totalGradeOfPoints / studentenList.Count;
-                    Console.WriteLine("Der durchschnittliche Notenschnitt ist: " + averageGradePoint2 + "\n");
-                    //studenten.AravangeStudentNc(totalGradeOfPoints, studentenList.Count);
-                }
+                //else if (input == "2")
+                //{
+                //    float averageGradePoint2 = totalGradeOfPoints / studentenList.Count;
+                //    Console.WriteLine("Der durchschnittliche Notenschnitt ist: " + averageGradePoint2 + "\n");
+
+                //}
                 if (input == "3")
                 {
                     break;
