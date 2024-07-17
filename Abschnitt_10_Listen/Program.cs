@@ -87,11 +87,11 @@ namespace Abschnitt_10_Listen
                 Console.WriteLine("3. Programm beenden");
                 string input = Console.ReadLine();
 
-                List<Student> studentenList = new List<Student>();
-                studentenList.Add(new Student("aaaaaaa", "bbbbbbbbb", 4f));
-                studentenList.Add(new Student("ccccccc", "dddddddd", 3f));
-                studentenList.Add(new Student("eeeeeee", "ffffffff", 2f));
-                studentenList.Add(new Student("ggggggg", "hhhhhhhh", 1f));
+                //List<Student> studentenList = new List<Student>();
+                //studentenList.Add(new Student("aaaaaaa", "bbbbbbbbb", 4f));
+                //studentenList.Add(new Student("ccccccc", "dddddddd", 3f));
+                //studentenList.Add(new Student("eeeeeee", "ffffffff", 2f));
+                //studentenList.Add(new Student("ggggggg", "hhhhhhhh", 1f));
 
                 if (input == "1")
                 {
@@ -104,11 +104,12 @@ namespace Abschnitt_10_Listen
 
                     Student studenten = new Student(firstName, lastName, nc);
 
-                    foreach (Student student in studentenList)//LISTE von kontruktor in foreach!!!???
-                    {
-                        totalGradeOfPoints += student.Nc;
-                    }
-                    Console.WriteLine("Der Notendurchschnitt ergibt: " + studenten.AravangeStudentNc(totalGradeOfPoints, studentenList.Count) + "\n");
+                    studenten.AddStudent(new Student("", "", 1));
+                    //foreach (Student student in studentenList)//LISTE von kontruktor in foreach!!!???
+                    //{
+                    //    totalGradeOfPoints += student.Nc;
+                    //}
+                    Console.WriteLine("Der Notendurchschnitt ergibt: " + studenten.AravangeStudentNc() + "\n");
                  
                     //studentenList.Add($"{firstName} {lastName} {nc}"); //Als Info für Add mit ${}
 

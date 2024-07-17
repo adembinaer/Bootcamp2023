@@ -18,6 +18,7 @@ namespace Abschnitt_10_Listen
         public float Nc { get; private set; }
 
         //List<string> studenten = new List<string>() { "Paul", "Jannick", "Quadrado" };
+        List<Student> studentenList = new List<Student>();
 
         public Student(string firstName, string lastName, float nc)
         {
@@ -26,9 +27,19 @@ namespace Abschnitt_10_Listen
             Nc = nc;
         }
 
-        public float AravangeStudentNc(float nc, int students)
-        {          
-            return nc / students;
+        public void AddStudent(Student student)
+        {
+            studentenList.Add(student);// ADD methode only 1 Argument. NEED firstName, lastName, nc --->how???
+        }
+
+        public float AravangeStudentNc()
+        {
+            float totalGradeOfPoints = 0;
+            foreach (Student student in studentenList)//LISTE von kontruktor in foreach!!!???
+            {
+                totalGradeOfPoints += student.Nc;
+            }
+            return totalGradeOfPoints / studentenList.Count;
         }
     }
 }
