@@ -23,7 +23,8 @@ namespace WeatherApp
     {
         private readonly string apiKey = "daa165c2d50865a2078272770f6cadc8";
 
-        private readonly string requestUrl = "http://api.openweathermap.org/geo/1.0/direct"; // Direkt von OpenWeather "http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}";
+        private readonly string requestUrl = "https://api.openweathermap.org/data/2.5/weather";
+        // Direkt von OpenWeather "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}";
         public MainWindow()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace WeatherApp
             HttpClient httpClient = new HttpClient();
 
             var city = "Berlin";
-            var finalUri = requestUrl + "?q=" + city + "&appid" + apiKey;
+            var finalUri = requestUrl + "?q=" + city + "&appid=" + apiKey + "&units=metric";
 
             // Antwort vom Server HttpClient GetAsync() auf Fragestellung von HttpResponseMessage 
             HttpResponseMessage httpResponse = httpClient.GetAsync(finalUri).Result; //GetAsync = Neue Thread läuft asynchron weiter
