@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
 
 namespace WeatherApp
 {
@@ -39,7 +40,10 @@ namespace WeatherApp
             //Testlauf was erhalten von httpResponse
             string response = httpResponse.Content.ReadAsStringAsync().Result;
 
-            Console.WriteLine(response);
+            WeatherMapResponse weatherMapResponse = JsonConvert.DeserializeObject<WeatherMapResponse>(response);
+            //weatherMapResponse.main.temp
+
+            Console.WriteLine(weatherMapResponse);
 
         }
     }
