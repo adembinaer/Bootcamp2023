@@ -30,21 +30,23 @@ namespace WeatherApp
         {
             InitializeComponent();
 
+            WeatherMapResponse result = GetWeatherData("Berlin");
+            //result. ...... 
+        }
+
+        public WeatherMapResponse GetWeatherData(string city)
+        {
             HttpClient httpClient = new HttpClient();
-
-            var city = "Berlin";
+            //var city = "Berlin";
             var finalUri = requestUrl + "?q=" + city + "&appid=" + apiKey + "&units=metric";
-
             // Antwort vom Server HttpClient GetAsync() auf Fragestellung von HttpResponseMessage 
             HttpResponseMessage httpResponse = httpClient.GetAsync(finalUri).Result; //GetAsync = Neue Thread läuft asynchron weiter
             //Testlauf was erhalten von httpResponse
             string response = httpResponse.Content.ReadAsStringAsync().Result;
-
             WeatherMapResponse weatherMapResponse = JsonConvert.DeserializeObject<WeatherMapResponse>(response);
             //weatherMapResponse.main.temp
-
-            Console.WriteLine(weatherMapResponse);
-
+            //Console.WriteLine(weatherMapResponse);
+            return weatherMapResponse;
         }
     }
 }

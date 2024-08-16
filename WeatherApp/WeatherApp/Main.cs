@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WeatherApp
 {
-    class Main
+    public class Main
     {
         public float temp;
     }

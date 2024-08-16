@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WeatherApp
 {
-    class WeatherMapResponse
+    public class WeatherMapResponse
     {
         //Nugget Packages Newtonsoft.Json zum JSON in c# konventieren zu können
         public Main main;
