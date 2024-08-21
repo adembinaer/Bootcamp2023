@@ -7,6 +7,41 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="512" Width="1024" ResizeMode="NoResize">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20">
+                
+            </ColumnDefinition>
+            <ColumnDefinition>
+                
+            </ColumnDefinition>
+            <ColumnDefinition>
+
+            </ColumnDefinition>
+            <ColumnDefinition Width="20">
+                
+            </ColumnDefinition>
+            <ColumnDefinition>
+
+            </ColumnDefinition>
+            <ColumnDefinition Width="20">
+                
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20">
+                
+            </RowDefinition>
+            <RowDefinition>
+                
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+
+            <RowDefinition Height="20">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush x:Name="backroundImage" ImageSource="/WeatherApp;component/Images/Sun.png">
                 

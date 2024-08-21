@@ -30,8 +30,28 @@ namespace WeatherApp
         {
             InitializeComponent();
 
-            WeatherMapResponse result = GetWeatherData("Berlin");
+            WeatherMapResponse result = GetWeatherData("sarajevo");
             //result. ...... 
+
+            string finalWeather = "sun.png";
+
+            string currentWeahter = result.weather[0].main.ToLower();
+
+            if (currentWeahter.Contains("rain"))
+            {
+                finalWeather = "rain.png";
+            }
+            else if (currentWeahter.Contains("snow"))
+            {
+                finalWeather = "snow.png";
+            }
+            else if (currentWeahter.Contains("cloud"))
+            {
+                finalWeather = "cloud.png";
+            }
+
+            backroundImage.ImageSource = new BitmapImage(new Uri("images/" + finalWeather, UriKind.Relative));
+
         }
 
         public WeatherMapResponse GetWeatherData(string city)
