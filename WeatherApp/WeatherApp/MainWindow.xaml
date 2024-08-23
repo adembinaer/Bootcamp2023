@@ -9,30 +9,30 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20">
-                
+
             </ColumnDefinition>
             <ColumnDefinition>
-                
+
             </ColumnDefinition>
             <ColumnDefinition>
 
             </ColumnDefinition>
             <ColumnDefinition Width="20">
-                
+
             </ColumnDefinition>
             <ColumnDefinition>
 
             </ColumnDefinition>
             <ColumnDefinition Width="20">
-                
+
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20">
-                
+
             </RowDefinition>
             <RowDefinition>
-                
+
             </RowDefinition>
             <RowDefinition>
 
@@ -47,7 +47,7 @@
         </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush x:Name="backroundImage" ImageSource="/WeatherApp;component/Images/Sun.png">
-                
+
             </ImageBrush>
         </Grid.Background>
         <Label x:Name="labelCelsius" Grid.Column="1" Grid.Row="2" Content="40°C" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="White">
@@ -55,6 +55,11 @@
                 <DropShadowEffect ShadowDepth="5" BlurRadius="1" Color="#FF4F21EE" Opacity="0.95"/>
             </Label.Effect>
 
+        </Label>
+        <Label x:Name="labelInfo" Grid.Column="1" Grid.Row="3" Content="Cloudy" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="35" Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="3" BlurRadius="1" Color="#FF4F21EE" Opacity="0.95"/>
+            </Label.Effect>
         </Label>
     </Grid>
 </Window>
