@@ -52,6 +52,7 @@ namespace WeatherApp
 
             backroundImage.ImageSource = new BitmapImage(new Uri("images/" + finalWeather, UriKind.Relative));
 
+            labelCelsius.Content = result.main.temp.ToString("F1") + "°C";
         }
 
         public WeatherMapResponse GetWeatherData(string city)
