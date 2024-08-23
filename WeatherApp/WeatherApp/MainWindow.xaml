@@ -37,6 +37,9 @@
             <RowDefinition>
 
             </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
 
             <RowDefinition Height="20">
 
@@ -47,5 +50,11 @@
                 
             </ImageBrush>
         </Grid.Background>
+        <Label x:Name="labelCelsius" Grid.Column="1" Grid.Row="2" Content="40°C" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="5" BlurRadius="1" Color="#FF4F21EE" Opacity="0.95"/>
+            </Label.Effect>
+
+        </Label>
     </Grid>
 </Window>
