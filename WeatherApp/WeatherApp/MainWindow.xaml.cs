@@ -54,7 +54,7 @@ namespace WeatherApp
 
             labelCelsius.Content = result.main.temp.ToString("F1") + "°C";
 
-            labelInfo.Content = result.weather[0].main;
+            labelInfo.Content = result.weather[0].main; // Dringend anschauen das mit weather[]. via openweather
         }
 
         public WeatherMapResponse GetWeatherData(string city)
