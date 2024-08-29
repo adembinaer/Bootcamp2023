@@ -30,9 +30,39 @@ namespace WeatherApp
         {
             InitializeComponent();
 
-            WeatherMapResponse result = GetWeatherData("sarajevo");
-            //result. ...... 
+            UpadateData("Sarajevo");
 
+            //WeatherMapResponse result = GetWeatherData("Berlin");
+            ////result. ...... 
+
+            //string finalWeather = "sun.png";
+
+            //string currentWeahter = result.weather[0].main.ToLower();
+
+            //if (currentWeahter.Contains("rain"))
+            //{
+            //    finalWeather = "rain.png";
+            //}
+            //else if (currentWeahter.Contains("snow"))
+            //{
+            //    finalWeather = "snow.png";
+            //}
+            //else if (currentWeahter.Contains("cloud"))
+            //{
+            //    finalWeather = "cloud.png";
+            //}
+
+            //backroundImage.ImageSource = new BitmapImage(new Uri("images/" + finalWeather, UriKind.Relative));
+
+            //labelCelsius.Content = result.main.temp.ToString("F1") + "°C";
+
+            //labelInfo.Content = result.weather[0].main; // Dringend anschauen das mit weather[]. via openweather
+        }
+
+        public void UpadateData(string city)
+        {
+            WeatherMapResponse result = GetWeatherData(city);
+        
             string finalWeather = "sun.png";
 
             string currentWeahter = result.weather[0].main.ToLower();
@@ -54,9 +84,8 @@ namespace WeatherApp
 
             labelCelsius.Content = result.main.temp.ToString("F1") + "°C";
 
-            labelInfo.Content = result.weather[0].main; // Dringend anschauen das mit weather[]. via openweather
+            labelInfo.Content = result.weather[0].main; 
         }
-
         public WeatherMapResponse GetWeatherData(string city)
         {
             HttpClient httpClient = new HttpClient();
@@ -70,6 +99,15 @@ namespace WeatherApp
             //weatherMapResponse.main.temp
             //Console.WriteLine(weatherMapResponse);
             return weatherMapResponse;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string query = textBoxQuery.Text;
+            //WeatherMapResponse result = GetWeatherData(query);
+
+            UpadateData(query);
+
         }
     }
 }

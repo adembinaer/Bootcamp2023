@@ -106,7 +106,7 @@
 
             </ImageBrush>
         </Grid.Background>
-        <Label x:Name="labelCelsius" Grid.Column="1" Grid.Row="3" Content="40°C" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="#FFB9AFAF">
+        <Label x:Name="labelCelsius" Grid.Column="1" Grid.Row="3" Content="40°C" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="#FFB9AFAF" AutomationProperties.IsOffscreenBehavior="Default">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="5" BlurRadius="1" Color="#FFF5EEED" Opacity="0.95"/>
             </Label.Effect>
@@ -118,11 +118,11 @@
             </Label.Effect>
         </Label>
 
-        <Border x:Name="search" Grid.Column="1" Grid.ColumnSpan="2" Padding="5" CornerRadius="25" BorderThickness="1" Background="White" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <TextBlock Text="Sarajevo" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold"></TextBlock>
+        <Border Grid.Column="1" Grid.ColumnSpan="2" Padding="5" CornerRadius="25" BorderThickness="1" Background="White" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <TextBox x:Name="textBoxQuery" Text="Sarajevo" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="27" FontWeight="Bold" BorderBrush="#FFFAFAFB" AllowDrop="True"/>
         </Border>
-        <Border x:Name="search2" Grid.Column="4" Padding="5" CornerRadius="10" BorderThickness="1" Background="White" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Button Style="{DynamicResource ButtonStyle1}" Cursor="Hand" Background="Transparent" BorderThickness="0" Content="Update" FontSize="25" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+        <Border Grid.Column="4" Padding="5" CornerRadius="10" BorderThickness="1" Background="White" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button Click="Button_Click" Style="{DynamicResource ButtonStyle1}" Cursor="Hand" Background="Transparent" BorderThickness="0" Content="Update" FontSize="25" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 
             </Button>
         </Border>
