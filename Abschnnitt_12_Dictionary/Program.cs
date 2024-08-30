@@ -42,7 +42,7 @@ namespace Abschnnitt_12_Dictionary
             }
             else
             {
-                // Wert nicht gefunden
+                // Key nicht gefunden
             }
 
 
