@@ -8,7 +8,7 @@ namespace Abschnnitt_12_Dictionary
         static void Main(string[] args)
         {
 
-            //UseCase1+2
+            ////UseCase1+2
             //int[] numbers = new int[10] { 20, 20, 30, 30, 30, 30, 60, 90, 90, 90 };
 
             //Dictionary<int, int> numbersCount = new Dictionary<int, int>();

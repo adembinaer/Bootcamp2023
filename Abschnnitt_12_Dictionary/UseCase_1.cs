@@ -16,10 +16,19 @@ namespace Abschnnitt_12_Dictionary
 
             foreach (int number in numbers)
             {
-                numbersCount.Add(number, 1);
+                if (numbersCount.ContainsKey(number))
+                {
+                    //Number kommt vor (Key existiert)
+                    numbersCount[number] += 1;
+                }
+                else
+                {
+                    numbersCount.Add(number, 1);
+                }
+
             }
+
+
         }
-
-
     }
 }
