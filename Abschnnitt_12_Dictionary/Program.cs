@@ -6,7 +6,30 @@ namespace Abschnnitt_12_Dictionary
     class Program
     {
         static void Main(string[] args)
-        {   
+        {
+
+            //UseCase1+2
+            //int[] numbers = new int[10] { 20, 20, 30, 30, 30, 30, 60, 90, 90, 90 };
+
+            //Dictionary<int, int> numbersCount = new Dictionary<int, int>();
+
+            //foreach (int number in numbers)
+            //{
+            //    if (numbersCount.ContainsKey(number))
+            //    {
+            //        //Number kommt vor (Key existiert)
+            //        numbersCount[number] += 1;
+            //    }
+            //    else
+            //    {
+            //        numbersCount.Add(number, 1);
+            //    }
+
+            //}
+            //Console.WriteLine("");
+
+
+
             // Produkt | Preis
             // Milch | 1.49f
             Dictionary<string, float> products = new Dictionary<string, float>();
@@ -18,7 +41,7 @@ namespace Abschnnitt_12_Dictionary
             Console.WriteLine(products["Milch"]);
 
             //Beispiel. Beim Iterieren ist KEY immer O(1) aber Value kann O(n) sein!!!
-            foreach(KeyValuePair<string, float> product in products)
+            foreach (KeyValuePair<string, float> product in products)
             {
                 Console.WriteLine(product.Key + " " + product.Value);
             }
