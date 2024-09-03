@@ -6,7 +6,7 @@ namespace Abschnitt_13_Switch_Enum
     {
         static void Main(string[] args)
         {
-            ////Enums Übung
+            ////Enums Übung. Vorteil, man kann via Casting direkt auf das Enum zugreifen und sieht dann den Value vom Enum und nicht irgendwelche Magic Numbers
 
             //Resolutions myResolution = Resolutions.UHD;
 
