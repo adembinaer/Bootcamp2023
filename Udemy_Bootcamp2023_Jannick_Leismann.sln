@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abschnitt_9_OOP_Projekt_Ban
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abschnitt_10_Listen", "Abschnitt_10_Listen\Abschnitt_10_Listen.csproj", "{EF416093-D074-4140-9D50-A0F097A7F9D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abschnnitt_12_Dictionary", "Abschnnitt_12_Dictionary\Abschnnitt_12_Dictionary.csproj", "{EA107034-7183-4E4A-8E1D-9CEEDE3F1B5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abschnnitt_12_Dictionary", "Abschnnitt_12_Dictionary\Abschnnitt_12_Dictionary.csproj", "{EA107034-7183-4E4A-8E1D-9CEEDE3F1B5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abschnitt_13_Switch_Enum", "Abschnitt_13_Switch_Enum\Abschnitt_13_Switch_Enum.csproj", "{9119652A-09FB-4F33-952A-53E10F6D66D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{EA107034-7183-4E4A-8E1D-9CEEDE3F1B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA107034-7183-4E4A-8E1D-9CEEDE3F1B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA107034-7183-4E4A-8E1D-9CEEDE3F1B5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9119652A-09FB-4F33-952A-53E10F6D66D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9119652A-09FB-4F33-952A-53E10F6D66D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9119652A-09FB-4F33-952A-53E10F6D66D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9119652A-09FB-4F33-952A-53E10F6D66D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
