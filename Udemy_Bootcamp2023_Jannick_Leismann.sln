@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abschnnitt_12_Dictionary", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abschnitt_13_Switch_Enum", "Abschnitt_13_Switch_Enum\Abschnitt_13_Switch_Enum.csproj", "{9119652A-09FB-4F33-952A-53E10F6D66D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abschnitt_14_Erweiterte Schleifen", "Abschnitt_14_Erweiterte Schleifen\Abschnitt_14_Erweiterte Schleifen.csproj", "{B0AE38A1-89C3-4651-8464-B19AD27F6054}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9119652A-09FB-4F33-952A-53E10F6D66D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9119652A-09FB-4F33-952A-53E10F6D66D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9119652A-09FB-4F33-952A-53E10F6D66D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0AE38A1-89C3-4651-8464-B19AD27F6054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0AE38A1-89C3-4651-8464-B19AD27F6054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0AE38A1-89C3-4651-8464-B19AD27F6054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0AE38A1-89C3-4651-8464-B19AD27F6054}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
