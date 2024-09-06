@@ -31,10 +31,15 @@ namespace Abschnitt_14_Erweiterte_Schleifen
             for (int i = 0; i < products.Count; i++)
             {
                 Console.WriteLine("Produkt: " + products[i].Name);
+
+                if (products[i].Name == "Toaster")//Übung Continue
+                {
+                    continue;
+                }
+
                 for (int r = 0; r < products[i].Ratings.Count; r++)
                 {
                     Console.WriteLine($"{products[i].Ratings[r]} + * für das Produkt + {products[i].Name}");
-
                     if( products[i].Ratings[r] == 1) //Übung Break
                     {
                         Console.WriteLine("Diese Produkt ist schlecht");
