@@ -32,7 +32,7 @@ namespace Abschnitt_14_Erweiterte_Schleifen
             {
                 Console.WriteLine("Produkt: " + products[i].Name);
 
-                if (products[i].Name == "Toaster")//Übung Continue
+                if (products[i].Name == "Toaster")//Übung Continue. Continue beendet sofort Schleifeniteration ab und sprint auf die outer loop
                 {
                     continue;
                 }
@@ -40,10 +40,10 @@ namespace Abschnitt_14_Erweiterte_Schleifen
                 for (int r = 0; r < products[i].Ratings.Count; r++)
                 {
                     Console.WriteLine($"{products[i].Ratings[r]} + * für das Produkt + {products[i].Name}");
-                    if( products[i].Ratings[r] == 1) //Übung Break
+                    if( products[i].Ratings[r] == 1) //Übung Break. Beendet/bricht komplette Schleife
                     {
                         Console.WriteLine("Diese Produkt ist schlecht");
-                        break;
+                        break;  
                     }
                 }
             }
