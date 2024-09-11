@@ -7,7 +7,9 @@ namespace Abschnitt_15_IO_Files_Path
 {
     public class Directory_Lession
     {
-        string path2 = "C:\Users\Files\files"; // 
+        string path3 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/files"; // zum Beispiel
+        string path2 = @"C:\Users\Files\files"; // zum Beispiel
+
         string path = "files/";
         string fileName = "text.txt";
 
