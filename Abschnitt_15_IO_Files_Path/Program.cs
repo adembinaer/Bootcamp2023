@@ -50,7 +50,8 @@ namespace Abschnitt_15_IO_Files_Path
 
             // Übung Ordner class Directory
             Directory_Lession diractoryMethod = new Directory_Lession();
-            Console.WriteLine(diractoryMethod.DirectoryPath());
+            diractoryMethod.DirectoryPath();
+            Console.WriteLine("");
         }
     }
 }
