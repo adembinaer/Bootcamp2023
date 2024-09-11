@@ -3,11 +3,12 @@ using System.IO; // Input/Output
 
 namespace Abschnitt_15_IO_Files_Path
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            //string path = "test.txt";
+            string path = "test.txt";
+            string fileName = "text.txt";
 
             //// Create File
             //File.Create(path);
@@ -46,12 +47,17 @@ namespace Abschnitt_15_IO_Files_Path
             //    Console.WriteLine("File deleted");
             //    File.Delete(path);
             //}
-
+            
+            //Übung Combine aber, es funktionert nicht
+            //string finalPath = Path.Combine(path, fileName);
 
             // Übung Ordner class Directory
             Directory_Lession diractoryMethod = new Directory_Lession();
             diractoryMethod.DirectoryPath();
             Console.WriteLine("");
+
+            //Übung Combine aber, es funktionert nicht
+            //string finalPath = Path.Combine(path, fileName);
         }
     }
 }
