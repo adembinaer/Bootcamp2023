@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.IO; // Input/Output
+using System.Text;
+
 
 namespace Patientenkartei
 {
@@ -27,6 +18,17 @@ namespace Patientenkartei
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
+            string content = textBoxContent.Text;
+            string filename = textBoxFileName.Text;
+            Console.WriteLine(content + filename); // Test ob clickbutton funktioniert
+
+            using (FileStream fs = File.Create(filename + ".txt")) //filename ist hier der "path" //.txt angeben wenn man direkt weiss welchen Datentyp man braucht.
+            {
+                byte[] contentConvertedToBytes = Encoding.ASCII.GetBytes(content);
+                fs.Write(contentConvertedToBytes, 0, contentConvertedToBytes.Length); //offset = wo beginnen 0 = vom anfang
+
+
+            }
 
         }
     }
