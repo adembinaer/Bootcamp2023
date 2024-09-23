@@ -25,6 +25,7 @@
         <TextBox x:Name="textBoxContent" AcceptsReturn="True" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="3" Text="Inhalt hier eintragen" TextWrapping="Wrap" Margin="0,0,253,0"/>
         <TextBox x:Name="textBoxFileName" Grid.Row="1" Grid.Column="3" Text="Dateiname" TextWrapping="Wrap" Width="200" Height="50" VerticalAlignment="Top"/>
         <Button x:Name="btnCreate" Content="Erstellen" Grid.Column="3" Grid.Row="3" Width="150" Height="50" Click="btnCreate_Click" />
+        <Button x:Name="btnRead" Content="Lesen" Grid.Column="3" Grid.Row="2" Width="150" Height="50" Click="btnRead_Click"/>
 
 
     </Grid>
