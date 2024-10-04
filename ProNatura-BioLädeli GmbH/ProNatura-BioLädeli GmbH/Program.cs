@@ -17,7 +17,7 @@ namespace ProNatura_BioLädeli_GmbH
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LoadingScreen());
         }
     }
 }

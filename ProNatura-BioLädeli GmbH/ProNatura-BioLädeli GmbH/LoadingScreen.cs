@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProNatura_BioLädeli_GmbH
 {
-    public partial class Form1 : Form
+    public partial class LoadingScreen : Form
     {
-        public Form1()
+        public LoadingScreen()
         {
             InitializeComponent();
         }
