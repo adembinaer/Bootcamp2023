@@ -1,0 +1,7 @@
+Fülle die Progressbar von 0 auf 100 in 5 Sekunden
+- setze die Property mit Namen "Value" auf einen höheren Wert
+- Wenn Value == 100 -> aufhören
+
+1. start timer
+2. timer tickt
+3. stop timer
