@@ -41,6 +41,12 @@ namespace ProNatura_BioLädeli_GmbH
             {
                 loadingbarTimer.Stop();
                 // Finish loading
+                // Finish loading show main menu screen
+
+                MainMenuScreen mainMenuScreen = new MainMenuScreen();
+                mainMenuScreen.Show();
+
+                this.Hide();
             }
         }
 
