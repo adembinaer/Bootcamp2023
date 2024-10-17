@@ -45,6 +45,7 @@ namespace ProNatura_BioLädeli_GmbH
             this.btnProducts.TabIndex = 0;
             this.btnProducts.Text = "Produkte verwalten";
             this.btnProducts.UseVisualStyleBackColor = true;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // btnBill
             // 

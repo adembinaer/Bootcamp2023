@@ -16,5 +16,13 @@ namespace ProNatura_BioLädeli_GmbH
         {
             InitializeComponent();
         }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {          
+            Produkte productsScreen = new Produkte();
+            productsScreen.Show(); 
+            
+            this.Hide();
+        }
     }
 }

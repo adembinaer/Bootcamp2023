@@ -1,0 +1,5 @@
+Ein Produkt :
+-Namen -> string
+-Marke -> string
+-Kategorie -> string
+-Preis -> float/decimal zbs 1,49
