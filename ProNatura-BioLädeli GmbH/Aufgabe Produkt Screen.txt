@@ -3,3 +3,9 @@ Ein Produkt :
 -Marke -> string
 -Kategorie -> string
 -Preis -> float/decimal zbs 1,49
+
+Benutzer kann:
+- neue Produkte anglegen
+- Produkte löschen
+- Produkte bearbeiten
+- Textfelder leeren
