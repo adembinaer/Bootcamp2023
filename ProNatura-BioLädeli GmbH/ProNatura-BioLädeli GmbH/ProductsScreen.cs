@@ -20,6 +20,48 @@ namespace ProNatura_BioLädeli_GmbH
             InitializeComponent();
 
             // Statpunkt -> DB muss Daten geladen haben
+            ShowProducts();
+        }
+        private void btnProductSave_Click(object sender, EventArgs e)
+        {
+            //Test
+            //string productName = txtBoxProductName.Text;
+            //Console.WriteLine(productName);
+
+            //Save product name in database
+            string productName = txtBoxProductName.Text;
+            string productBrand = textBoxProductBrand.Text;
+            string productCategory = comboBoxProductCategory.Text;
+            float productPrice = float.Parse(textBoxProductPrice.Text);
+
+
+
+
+            ClearAllFields();
+            ShowProducts();
+        }
+        private void btnProductEdit_Click(object sender, EventArgs e)
+        {
+            ShowProducts();
+        }
+        private void btnProductClear_Click(object sender, EventArgs e)
+        {
+            ClearAllFields();
+        }
+        private void btnProductDelete_Click(object sender, EventArgs e)
+        {
+            ShowProducts();
+        }
+        private void ClearAllFields()
+        {
+            txtBoxProductName.Clear();
+            textBoxProductBrand.Clear();
+            textBoxProductPrice.Clear();
+            comboBoxProductCategory.Text = "";
+            comboBoxProductCategory.SelectedItem = null;
+        }
+        private void ShowProducts()
+        {
             sqlConnectionString.Open();
 
             string query = "select * from Products";
@@ -33,29 +75,6 @@ namespace ProNatura_BioLädeli_GmbH
             productsDGV.Columns[0].Visible = false; //Spalte mit Id ist nicht mehr sichtbar
 
             sqlConnectionString.Close();
-        }
-
-        private void btnProductSave_Click(object sender, EventArgs e)
-        {
-            string productName = txtBoxProductName.Text;
-            Console.WriteLine(productName);
-
-            //Save product name in database
-        }
-
-        private void btnProductEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnProductClear_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnProductDelete_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
