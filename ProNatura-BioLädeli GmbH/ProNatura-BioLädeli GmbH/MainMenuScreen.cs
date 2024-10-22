@@ -19,7 +19,7 @@ namespace ProNatura_BioLädeli_GmbH
 
         private void btnProducts_Click(object sender, EventArgs e)
         {          
-            Produkte productsScreen = new Produkte();
+            ProductsScreen productsScreen = new ProductsScreen();
             productsScreen.Show(); 
             
             this.Hide();
