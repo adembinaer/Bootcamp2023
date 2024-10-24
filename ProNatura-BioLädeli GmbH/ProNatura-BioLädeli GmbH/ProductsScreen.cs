@@ -42,7 +42,14 @@ namespace ProNatura_BioLädeli_GmbH
             string productName = txtBoxProductName.Text;
             string productBrand = textBoxProductBrand.Text;
             string productCategory = comboBoxProductCategory.Text;
-            float productPrice = float.Parse(textBoxProductPrice.Text);
+            string productPrice = textBoxProductPrice.Text;
+            //float productPrice = float.Parse(textBoxProductPrice.Text);
+
+            sqlConnectionString.Open(); // Bei jedem SqlCommand muss man eine DB Connection erzeugen Open/Close();
+            string query = string.Format("insert into Products value('{0}','{1}','{2}','{3}')",productName,productBrand,productCategory,productPrice);
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnectionString);
+            sqlCommand.ExecuteNonQuery();
+            sqlConnectionString.Close();
 
             ClearAllFields();
             ShowProducts();
