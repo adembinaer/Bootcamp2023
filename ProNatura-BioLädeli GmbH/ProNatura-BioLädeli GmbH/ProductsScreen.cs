@@ -29,13 +29,20 @@ namespace ProNatura_BioLädeli_GmbH
             //Console.WriteLine(productName);
 
             //Save product name in database
+
+            if(txtBoxProductName.Text == null
+                || textBoxProductBrand.Text == null
+                || comboBoxProductCategory.Text == null
+                || textBoxProductPrice.Text == "") //null ergibt beim Parsen einen Fehler!!!
+            {
+                MessageBox.Show("Bitte alle Werte ausfüllen");
+                return;//Hier wird der Restcode abgebrochen wenn if-statement erfüllt ist.
+            }
+
             string productName = txtBoxProductName.Text;
             string productBrand = textBoxProductBrand.Text;
             string productCategory = comboBoxProductCategory.Text;
             float productPrice = float.Parse(textBoxProductPrice.Text);
-
-
-
 
             ClearAllFields();
             ShowProducts();
