@@ -46,7 +46,7 @@ namespace ProNatura_BioLädeli_GmbH
             //float productPrice = float.Parse(textBoxProductPrice.Text);
 
             sqlConnectionString.Open(); // Bei jedem SqlCommand muss man eine DB Connection erzeugen Open/Close();
-            string query = string.Format("insert into Products value('{0}','{1}','{2}','{3}')",productName,productBrand,productCategory,productPrice);
+            string query = string.Format("insert into Products values('{0}','{1}','{2}','{3}')",productName,productBrand,productCategory,productPrice);
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnectionString);
             sqlCommand.ExecuteNonQuery();
             sqlConnectionString.Close();
@@ -64,6 +64,9 @@ namespace ProNatura_BioLädeli_GmbH
         }
         private void btnProductDelete_Click(object sender, EventArgs e)
         {
+
+
+
             ShowProducts();
         }
         private void ClearAllFields()
