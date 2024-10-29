@@ -14,7 +14,7 @@ namespace ProNatura_BioLädeli_GmbH
     public partial class ProductsScreen : Form
     {
         private SqlConnection sqlConnectionString = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\Adem Mirsada\Documents\ProNatura-BioLädeli GmbH.mdf;Integrated Security = True; Connect Timeout = 30");
-
+        private int lastSelectedProductKey;
         public ProductsScreen()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace ProNatura_BioLädeli_GmbH
 
             //Save product name in database
 
-            if(txtBoxProductName.Text == null
+            if (txtBoxProductName.Text == null
                 || textBoxProductBrand.Text == null
                 || comboBoxProductCategory.Text == null
                 || textBoxProductPrice.Text == "") //null ergibt beim Parsen einen Fehler!!!
@@ -45,15 +45,21 @@ namespace ProNatura_BioLädeli_GmbH
             string productPrice = textBoxProductPrice.Text;
             //float productPrice = float.Parse(textBoxProductPrice.Text);
 
-            sqlConnectionString.Open(); // Bei jedem SqlCommand muss man eine DB Connection erzeugen Open/Close();
-            string query = string.Format("insert into Products values('{0}','{1}','{2}','{3}')",productName,productBrand,productCategory,productPrice);
-            SqlCommand sqlCommand = new SqlCommand(query, sqlConnectionString);
-            sqlCommand.ExecuteNonQuery();
-            sqlConnectionString.Close();
+            //Dieser Codesnippet wurde in eine Extended Method übertragen ExecuteQuery()
+            //sqlConnectionString.Open(); // Bei jedem SqlCommand muss man eine DB Connection erzeugen Open/Close();
+            //string query = string.Format("insert into Products values('{0}','{1}','{2}','{3}')", productName, productBrand, productCategory, productPrice);
+            //SqlCommand sqlCommand = new SqlCommand(query, sqlConnectionString);
+            //sqlCommand.ExecuteNonQuery();
+            //sqlConnectionString.Close();
+
+            string query = string.Format("insert into Products values('{0}','{1}','{2}','{3}')", productName, productBrand, productCategory, productPrice);
+            ExecuteQuery(query);
 
             ClearAllFields();
             ShowProducts();
         }
+
+
         private void btnProductEdit_Click(object sender, EventArgs e)
         {
             ShowProducts();
@@ -64,9 +70,14 @@ namespace ProNatura_BioLädeli_GmbH
         }
         private void btnProductDelete_Click(object sender, EventArgs e)
         {
+            if(lastSelectedProductKey == 0)
+            {
+                MessageBox.Show("Bitte wähle zuerst ein Produkt aus");
+            }
+            string query = string.Format("delete from Products where Id = {0}", lastSelectedProductKey);
+            ExecuteQuery(query);
 
-
-
+            ClearAllFields();
             ShowProducts();
         }
         private void ClearAllFields()
@@ -76,6 +87,13 @@ namespace ProNatura_BioLädeli_GmbH
             textBoxProductPrice.Clear();
             comboBoxProductCategory.Text = "";
             comboBoxProductCategory.SelectedItem = null;
+        }
+        private void ExecuteQuery(string query)
+        {
+            sqlConnectionString.Open(); // Bei jedem SqlCommand muss man eine DB Connection erzeugen Open/Close();          
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnectionString);
+            sqlCommand.ExecuteNonQuery();
+            sqlConnectionString.Close();
         }
         private void ShowProducts()
         {
@@ -92,6 +110,18 @@ namespace ProNatura_BioLädeli_GmbH
             productsDGV.Columns[0].Visible = false; //Spalte mit Id ist nicht mehr sichtbar
 
             sqlConnectionString.Close();
+        }
+
+        private void productsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtBoxProductName.Text = productsDGV.SelectedRows[0].Cells[1].Value.ToString();
+            textBoxProductBrand.Text = productsDGV.SelectedRows[0].Cells[2].Value.ToString();
+            comboBoxProductCategory.Text = productsDGV.SelectedRows[0].Cells[3].Value.ToString();
+            textBoxProductPrice.Text = productsDGV.SelectedRows[0].Cells[4].Value.ToString();
+
+            lastSelectedProductKey = (int)productsDGV.SelectedRows[0].Cells[0].Value;
+            Console.WriteLine(lastSelectedProductKey);//Test was lastSelectedProductKey ausgibt
+
         }
     }
 }
