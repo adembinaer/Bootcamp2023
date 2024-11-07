@@ -62,6 +62,21 @@ namespace ProNatura_BioLädeli_GmbH
 
         private void btnProductEdit_Click(object sender, EventArgs e)
         {
+            if (lastSelectedProductKey == 0)
+            {
+                MessageBox.Show("Bitte wähle zuerst ein Produkt aus");
+                return;
+            }
+
+            string productName = txtBoxProductName.Text;
+            string productBrand = textBoxProductBrand.Text;
+            string productCategory = comboBoxProductCategory.Text;
+            string productPrice = textBoxProductPrice.Text;
+
+            string query = string.Format("update Products set Name='{0}', Brand='{1}', Category='{2}', Price='{3}' where Id={4}"
+                ,productName, productBrand, productCategory, productPrice, lastSelectedProductKey);
+
+            ExecuteQuery(query);
             ShowProducts();
         }
         private void btnProductClear_Click(object sender, EventArgs e)
