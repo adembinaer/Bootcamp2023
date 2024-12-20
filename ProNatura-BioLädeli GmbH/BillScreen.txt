@@ -1,0 +1,14 @@
+-Form erstellen
+-Form laden(Code vorhanden)
+-UI bauen
+-Welche Felder(Datenbankfelder und DGV anzeige) hat meine UI :
+ -> ID (int)
+ -> Rechnungsempfänger (Vorname) (string)
+ -> BillText = Fliesstext ("Diverse Produkte") (string)
+ -> TotalPrice (string)
+ ------>>>>>> Welche Felder welche Datentypen
+
+-DGV erstellen
+-Datenbanktabelle erstellen (Datenbank schon vorhanden)
+-SqlAdapter um Daten in DGV anzuzeigen
+-CRUD Operations implementieren (Create, Read(um SqlAdapter azuzeigen), Update, Delete)

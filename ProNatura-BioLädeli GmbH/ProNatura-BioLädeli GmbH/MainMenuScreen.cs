@@ -24,5 +24,10 @@ namespace ProNatura_BioLädeli_GmbH
             
             this.Hide();
         }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
