@@ -42,31 +42,40 @@ namespace ProNatura_BioLädeli_GmbH
             // 
             // textBoxBillName
             // 
-            this.textBoxBillName.Location = new System.Drawing.Point(153, 26);
+            this.textBoxBillName.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxBillName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBillName.Location = new System.Drawing.Point(153, 33);
             this.textBoxBillName.Name = "textBoxBillName";
-            this.textBoxBillName.Size = new System.Drawing.Size(205, 23);
+            this.textBoxBillName.Size = new System.Drawing.Size(205, 16);
             this.textBoxBillName.TabIndex = 0;
             // 
             // textBoxBillText
             // 
-            this.textBoxBillText.Location = new System.Drawing.Point(153, 71);
+            this.textBoxBillText.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxBillText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBillText.Location = new System.Drawing.Point(153, 78);
             this.textBoxBillText.Name = "textBoxBillText";
-            this.textBoxBillText.Size = new System.Drawing.Size(100, 23);
+            this.textBoxBillText.Size = new System.Drawing.Size(100, 16);
             this.textBoxBillText.TabIndex = 1;
             // 
             // textBoxBillPrice
             // 
-            this.textBoxBillPrice.Location = new System.Drawing.Point(153, 119);
+            this.textBoxBillPrice.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxBillPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBillPrice.Location = new System.Drawing.Point(153, 126);
             this.textBoxBillPrice.Name = "textBoxBillPrice";
-            this.textBoxBillPrice.Size = new System.Drawing.Size(100, 23);
+            this.textBoxBillPrice.Size = new System.Drawing.Size(100, 16);
             this.textBoxBillPrice.TabIndex = 3;
             // 
             // labelBillName
             // 
             this.labelBillName.AutoSize = true;
+            this.labelBillName.BackColor = System.Drawing.Color.Transparent;
+            this.labelBillName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelBillName.ForeColor = System.Drawing.Color.White;
             this.labelBillName.Location = new System.Drawing.Point(13, 34);
             this.labelBillName.Name = "labelBillName";
-            this.labelBillName.Size = new System.Drawing.Size(124, 15);
+            this.labelBillName.Size = new System.Drawing.Size(130, 15);
             this.labelBillName.TabIndex = 4;
             this.labelBillName.Text = "Rechnungsempfänger";
             // 
