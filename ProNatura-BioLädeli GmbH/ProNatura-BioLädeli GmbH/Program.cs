@@ -20,6 +20,7 @@ namespace ProNatura_BioLädeli_GmbH
             //Application.Run(new LoadingScreen());
             Application.Run(new MainMenuScreen());
             //Application.Run(new ProductsScreen());
+            //Application.Run(new BillScreen());
         }
     }
 }

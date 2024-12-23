@@ -30,25 +30,91 @@ namespace ProNatura_BioLädeli_GmbH
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillScreen));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxBillName = new System.Windows.Forms.TextBox();
+            this.textBoxBillText = new System.Windows.Forms.TextBox();
+            this.textBoxBillPrice = new System.Windows.Forms.TextBox();
+            this.labelBillName = new System.Windows.Forms.Label();
+            this.labelBillText = new System.Windows.Forms.Label();
+            this.labelBillPrice = new System.Windows.Forms.Label();
+            this.DGVBill = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVBill)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxBillName
             // 
-            this.textBox1.Location = new System.Drawing.Point(40, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 0;
+            this.textBoxBillName.Location = new System.Drawing.Point(153, 26);
+            this.textBoxBillName.Name = "textBoxBillName";
+            this.textBoxBillName.Size = new System.Drawing.Size(205, 23);
+            this.textBoxBillName.TabIndex = 0;
+            // 
+            // textBoxBillText
+            // 
+            this.textBoxBillText.Location = new System.Drawing.Point(153, 71);
+            this.textBoxBillText.Name = "textBoxBillText";
+            this.textBoxBillText.Size = new System.Drawing.Size(100, 23);
+            this.textBoxBillText.TabIndex = 1;
+            // 
+            // textBoxBillPrice
+            // 
+            this.textBoxBillPrice.Location = new System.Drawing.Point(153, 119);
+            this.textBoxBillPrice.Name = "textBoxBillPrice";
+            this.textBoxBillPrice.Size = new System.Drawing.Size(100, 23);
+            this.textBoxBillPrice.TabIndex = 3;
+            // 
+            // labelBillName
+            // 
+            this.labelBillName.AutoSize = true;
+            this.labelBillName.Location = new System.Drawing.Point(13, 34);
+            this.labelBillName.Name = "labelBillName";
+            this.labelBillName.Size = new System.Drawing.Size(124, 15);
+            this.labelBillName.TabIndex = 4;
+            this.labelBillName.Text = "Rechnungsempfänger";
+            // 
+            // labelBillText
+            // 
+            this.labelBillText.AutoSize = true;
+            this.labelBillText.Location = new System.Drawing.Point(13, 79);
+            this.labelBillText.Name = "labelBillText";
+            this.labelBillText.Size = new System.Drawing.Size(86, 15);
+            this.labelBillText.TabIndex = 5;
+            this.labelBillText.Text = "Rechnungstext";
+            // 
+            // labelBillPrice
+            // 
+            this.labelBillPrice.AutoSize = true;
+            this.labelBillPrice.Location = new System.Drawing.Point(13, 127);
+            this.labelBillPrice.Name = "labelBillPrice";
+            this.labelBillPrice.Size = new System.Drawing.Size(32, 15);
+            this.labelBillPrice.TabIndex = 6;
+            this.labelBillPrice.Text = "Preis";
+            // 
+            // DGVBill
+            // 
+            this.DGVBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVBill.GridColor = System.Drawing.Color.Maroon;
+            this.DGVBill.Location = new System.Drawing.Point(13, 162);
+            this.DGVBill.Name = "DGVBill";
+            this.DGVBill.RowTemplate.Height = 25;
+            this.DGVBill.Size = new System.Drawing.Size(775, 215);
+            this.DGVBill.TabIndex = 7;
             // 
             // BillScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(800, 399);
+            this.Controls.Add(this.DGVBill);
+            this.Controls.Add(this.labelBillPrice);
+            this.Controls.Add(this.labelBillText);
+            this.Controls.Add(this.labelBillName);
+            this.Controls.Add(this.textBoxBillPrice);
+            this.Controls.Add(this.textBoxBillText);
+            this.Controls.Add(this.textBoxBillName);
             this.Name = "BillScreen";
-            this.Text = "BillScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Rechnungen";
+            ((System.ComponentModel.ISupportInitialize)(this.DGVBill)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -56,6 +122,12 @@ namespace ProNatura_BioLädeli_GmbH
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxBillName;
+        private System.Windows.Forms.TextBox textBoxBillText;
+        private System.Windows.Forms.TextBox textBoxBillPrice;
+        private System.Windows.Forms.Label labelBillName;
+        private System.Windows.Forms.Label labelBillText;
+        private System.Windows.Forms.Label labelBillPrice;
+        private System.Windows.Forms.DataGridView DGVBill;
     }
 }

@@ -278,7 +278,7 @@ namespace ProNatura_BioLädeli_GmbH
             this.MaximizeBox = false;
             this.Name = "ProductsScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ProductsScreen";
+            this.Text = "Produkte";
             ((System.ComponentModel.ISupportInitialize)(this.productsDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
