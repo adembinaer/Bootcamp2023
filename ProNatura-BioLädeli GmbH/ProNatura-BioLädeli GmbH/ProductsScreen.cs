@@ -52,7 +52,8 @@ namespace ProNatura_BioLädeli_GmbH
             //sqlCommand.ExecuteNonQuery();
             //sqlConnectionString.Close();
 
-            string query = string.Format("insert into Products values('{0}','{1}','{2}','{3}')", productName, productBrand, productCategory, productPrice);
+            string query = string.Format("insert into Products values('{0}','{1}','{2}','{3}')"
+                , productName, productBrand, productCategory, productPrice);
             ExecuteQuery(query);
 
             ClearAllFields();

@@ -113,6 +113,11 @@ namespace ProNatura_BioLädeli_GmbH
             // 
             // DGVBill
             // 
+            this.DGVBill.AllowUserToAddRows = false;
+            this.DGVBill.AllowUserToDeleteRows = false;
+            this.DGVBill.AllowUserToResizeColumns = false;
+            this.DGVBill.AllowUserToResizeRows = false;
+            this.DGVBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVBill.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.DGVBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -122,10 +127,12 @@ namespace ProNatura_BioLädeli_GmbH
             this.DGVBill.MultiSelect = false;
             this.DGVBill.Name = "DGVBill";
             this.DGVBill.ReadOnly = true;
+            this.DGVBill.RowHeadersVisible = false;
             this.DGVBill.RowTemplate.Height = 25;
             this.DGVBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVBill.Size = new System.Drawing.Size(794, 250);
             this.DGVBill.TabIndex = 7;
+            this.DGVBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVBill_CellContentClick);
             // 
             // btnProductDelete
             // 
