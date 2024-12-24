@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.35229.62
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProNatura-BioLädeli GmbH", "ProNatura-BioLädeli GmbH.csproj", "{15EF6332-CDE3-48D7-8967-66DF301AF646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProNatura-BioLädeli GmbH", "ProNatura-BioLädeli GmbH.csproj", "{15EF6332-CDE3-48D7-8967-66DF301AF646}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "dbo.Bill", "C:\Users\Adem Mirsada\source\repos\dbo.Bill\dbo.Bill.sqlproj", "{A11FBC63-4D25-4B81-8EC6-4E882168CD1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{15EF6332-CDE3-48D7-8967-66DF301AF646}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15EF6332-CDE3-48D7-8967-66DF301AF646}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15EF6332-CDE3-48D7-8967-66DF301AF646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A11FBC63-4D25-4B81-8EC6-4E882168CD1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A11FBC63-4D25-4B81-8EC6-4E882168CD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A11FBC63-4D25-4B81-8EC6-4E882168CD1D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A11FBC63-4D25-4B81-8EC6-4E882168CD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A11FBC63-4D25-4B81-8EC6-4E882168CD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A11FBC63-4D25-4B81-8EC6-4E882168CD1D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
