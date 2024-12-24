@@ -55,13 +55,11 @@ namespace ProNatura_BioLädeli_GmbH
         }
         private void ConnectInsert()
         {
-            sqlConnectionString.Open();
-
             string billRechnungsempf = textBoxBillName.Text;
             string billText = textBoxBillText.Text;
             string billPrice = textBoxBillPrice.Text;
 
-
+            sqlConnectionString.Open();
             string insert = string.Format("insert into Bill values('{0}','{1}','{2}')"
                 , billRechnungsempf, billText, billPrice);
             SqlCommand sqlCommand = new SqlCommand(insert, sqlConnectionString);
@@ -75,13 +73,11 @@ namespace ProNatura_BioLädeli_GmbH
         }
         private void ConnectUpdate()
         {
-            sqlConnectionString.Open();
-
-            string billRechnungsempf = textBoxBillName.Text;
+          string billRechnungsempf = textBoxBillName.Text;
             string billText = textBoxBillText.Text;
             string billPrice = textBoxBillPrice.Text;
 
-
+            sqlConnectionString.Open();
             string update = string.Format("update Bill set Rechnungsempfänger ='{0}', Rechnungstext ='{1}', Preis ='{2}' where Id ={3}"
                 , billRechnungsempf, billText, billPrice, lastSelectedBillKey);
             SqlCommand sqlCommand = new SqlCommand(update, sqlConnectionString);
