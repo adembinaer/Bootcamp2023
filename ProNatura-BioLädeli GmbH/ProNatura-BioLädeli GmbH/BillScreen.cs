@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProNatura_BioLädeli_GmbH
@@ -45,6 +39,56 @@ namespace ProNatura_BioLädeli_GmbH
 
         }
 
+        private void ConnectInsert()
+        {
+            string billRechnungsempf = textBoxBillName.Text;
+            string billText = textBoxBillText.Text;
+            string billPrice = textBoxBillPrice.Text;
+
+            sqlConnectionString.Open();
+            string insert = string.Format("insert into dbo.Bill values('{0}','{1}','{2}')"
+                ,billRechnungsempf, billText, billPrice);
+            SqlCommand sqlCommand = new SqlCommand(insert, sqlConnectionString);
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+            sqlDataAdapter.InsertCommand = new SqlCommand(insert, sqlConnectionString);
+            sqlDataAdapter.InsertCommand.ExecuteNonQuery();
+
+            sqlCommand.Dispose();
+            sqlConnectionString.Close();
+        }
+        private void ConnectUpdate()
+        {
+            string billRechnungsempf = textBoxBillName.Text;
+            string billText = textBoxBillText.Text;
+            string billPrice = textBoxBillPrice.Text;
+
+            sqlConnectionString.Open();
+            string update = string.Format("update Bill set Rechnungsempfänger ='{0}', Rechnungstext ='{1}', Preis ='{2}' where Id ={4}"
+                , billRechnungsempf, billText, billPrice);
+            SqlCommand sqlCommand = new SqlCommand(update, sqlConnectionString);
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+            sqlDataAdapter.InsertCommand = new SqlCommand(update, sqlConnectionString);
+            sqlDataAdapter.InsertCommand.ExecuteNonQuery();
+
+            sqlCommand.Dispose();
+            sqlConnectionString.Close();
+        }
+        private void ConnectDelete()
+        {
+            sqlConnectionString.Open();
+
+            SqlCommand sqlCommand3 = new SqlCommand(delete, sqlConnectionString);
+
+            sqlConnectionString.Close();
+        }
+        private void ClearAllFields()
+        {
+            textBoxBillName.Clear();
+            textBoxBillText.Clear();
+            textBoxBillPrice.Clear();
+        }
         private void ShowBill()
         {
             sqlConnectionString.Open();
@@ -55,21 +99,6 @@ namespace ProNatura_BioLädeli_GmbH
             sqlDataAdapter.Fill(dataSet);
             DGVBill.DataSource = dataSet.Tables[0];
             
-            sqlConnectionString.Close();
-            //Connect(query,null,null);TEST
-        }
-        private void Connect(string insert, string update, string delete)
-        {
-            //string sqlConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\Adem Mirsada\Documents\ProNatura-BioLädeli GmbH.mdf;Integrated Security = True; Connect Timeout = 30";
-            //SqlConnection connection = new SqlConnection(sqlConnectionString);
-
-            sqlConnectionString.Open();
-            //string insert = "insert into dbo.Bill";
-            SqlCommand sqlCommand = new SqlCommand(insert, sqlConnectionString);
-            SqlCommand sqlCommand2 = new SqlCommand(update, sqlConnectionString);
-            SqlCommand sqlCommand3 = new SqlCommand(delete, sqlConnectionString);
-
-
             sqlConnectionString.Close();
         }
     }
