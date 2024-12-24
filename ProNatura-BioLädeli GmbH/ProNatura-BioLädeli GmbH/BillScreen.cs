@@ -51,7 +51,15 @@ namespace ProNatura_BioLädeli_GmbH
 
         private void btnProductDelete_Click(object sender, EventArgs e)
         {
+            if(lastSelectedBillKey == 0)
+            {
+                MessageBox.Show("Bitte eine Rechnung auswählen");
+                return;
+            }
 
+            ConnectDelete();
+            ClearAllFields();
+            ShowBill();
         }
         private void ConnectInsert()
         {
@@ -62,7 +70,8 @@ namespace ProNatura_BioLädeli_GmbH
             sqlConnectionString.Open();
             string insert = string.Format("insert into Bill values('{0}','{1}','{2}')"
                 , billRechnungsempf, billText, billPrice);
-            SqlCommand sqlCommand = new SqlCommand(insert, sqlConnectionString);
+
+            SqlCommand sqlCommand = new SqlCommand(insert, sqlConnectionString);//Hilfreich nur für sqlCommand.Dispose()
 
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
             sqlDataAdapter.InsertCommand = new SqlCommand(insert, sqlConnectionString);
@@ -73,14 +82,15 @@ namespace ProNatura_BioLädeli_GmbH
         }
         private void ConnectUpdate()
         {
-          string billRechnungsempf = textBoxBillName.Text;
+            string billRechnungsempf = textBoxBillName.Text;
             string billText = textBoxBillText.Text;
             string billPrice = textBoxBillPrice.Text;
 
             sqlConnectionString.Open();
             string update = string.Format("update Bill set Rechnungsempfänger ='{0}', Rechnungstext ='{1}', Preis ='{2}' where Id ={3}"
                 , billRechnungsempf, billText, billPrice, lastSelectedBillKey);
-            SqlCommand sqlCommand = new SqlCommand(update, sqlConnectionString);
+
+            SqlCommand sqlCommand = new SqlCommand(update, sqlConnectionString);//Hilfreich nur für sqlCommand.Dispose()
 
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
             sqlDataAdapter.InsertCommand = new SqlCommand(update, sqlConnectionString);
@@ -93,8 +103,15 @@ namespace ProNatura_BioLädeli_GmbH
         {
             sqlConnectionString.Open();
 
-            //SqlCommand sqlCommand3 = new SqlCommand(delete, sqlConnectionString);
+            string delete = string.Format("delete from Bill where Id={0}", lastSelectedBillKey);
 
+            SqlCommand sqlCommand = new SqlCommand(delete, sqlConnectionString);//Hilfreich nur für sqlCommand.Dispose()
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+            sqlDataAdapter.DeleteCommand = new SqlCommand(delete, sqlConnectionString);
+            sqlDataAdapter.DeleteCommand.ExecuteNonQuery();
+
+            sqlCommand.Dispose();
             sqlConnectionString.Close();
         }
         private void ClearAllFields()
