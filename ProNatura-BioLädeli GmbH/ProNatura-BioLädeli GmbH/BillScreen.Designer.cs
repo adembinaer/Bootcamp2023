@@ -114,6 +114,8 @@ namespace ProNatura_BioLädeli_GmbH
             // DGVBill
             // 
             this.DGVBill.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.DGVBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGVBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DGVBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVBill.GridColor = System.Drawing.SystemColors.Control;
             this.DGVBill.Location = new System.Drawing.Point(72, 215);
@@ -127,7 +129,7 @@ namespace ProNatura_BioLädeli_GmbH
             // 
             // btnProductDelete
             // 
-            this.btnProductDelete.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnProductDelete.BackColor = System.Drawing.Color.White;
             this.btnProductDelete.FlatAppearance.BorderSize = 2;
             this.btnProductDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnProductDelete.ForeColor = System.Drawing.Color.Black;
@@ -137,10 +139,11 @@ namespace ProNatura_BioLädeli_GmbH
             this.btnProductDelete.TabIndex = 16;
             this.btnProductDelete.Text = "Löschen";
             this.btnProductDelete.UseVisualStyleBackColor = false;
+            this.btnProductDelete.Click += new System.EventHandler(this.btnProductDelete_Click);
             // 
             // btnProductClear
             // 
-            this.btnProductClear.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnProductClear.BackColor = System.Drawing.Color.White;
             this.btnProductClear.FlatAppearance.BorderSize = 2;
             this.btnProductClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnProductClear.ForeColor = System.Drawing.Color.Black;
@@ -150,10 +153,11 @@ namespace ProNatura_BioLädeli_GmbH
             this.btnProductClear.TabIndex = 15;
             this.btnProductClear.Text = "Felder leeren";
             this.btnProductClear.UseVisualStyleBackColor = false;
+            this.btnProductClear.Click += new System.EventHandler(this.btnProductClear_Click);
             // 
             // btnProductEdit
             // 
-            this.btnProductEdit.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnProductEdit.BackColor = System.Drawing.Color.White;
             this.btnProductEdit.FlatAppearance.BorderSize = 2;
             this.btnProductEdit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnProductEdit.ForeColor = System.Drawing.Color.Black;
@@ -163,10 +167,11 @@ namespace ProNatura_BioLädeli_GmbH
             this.btnProductEdit.TabIndex = 14;
             this.btnProductEdit.Text = "Bearbeiten";
             this.btnProductEdit.UseVisualStyleBackColor = false;
+            this.btnProductEdit.Click += new System.EventHandler(this.btnProductEdit_Click);
             // 
             // btnProductSave
             // 
-            this.btnProductSave.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnProductSave.BackColor = System.Drawing.Color.White;
             this.btnProductSave.FlatAppearance.BorderSize = 2;
             this.btnProductSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnProductSave.ForeColor = System.Drawing.Color.Black;
@@ -176,6 +181,7 @@ namespace ProNatura_BioLädeli_GmbH
             this.btnProductSave.TabIndex = 13;
             this.btnProductSave.Text = "Speichern";
             this.btnProductSave.UseVisualStyleBackColor = false;
+            this.btnProductSave.Click += new System.EventHandler(this.btnProductSave_Click);
             // 
             // BillScreen
             // 
