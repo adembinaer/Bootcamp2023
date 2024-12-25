@@ -130,7 +130,7 @@ namespace ProNatura_BioLädeli_GmbH
             sqlDataAdapter.Fill(dataSet);
             DGVBill.DataSource = dataSet.Tables[0];
 
-            DGVBill.Columns[0].Visible = false;
+            //DGVBill.Columns[0].Visible = false;
 
             sqlConnectionString.Close();
         }
