@@ -18,9 +18,9 @@ namespace ProNatura_BioLädeli_GmbH
 
         private void btnProductSave_Click(object sender, EventArgs e)
         {
-            if (textBoxBillName == null
-                || textBoxBillText == null
-                || textBoxBillPrice == null)
+            if(textBoxBillName.Text == null
+                || textBoxBillText.Text == null
+                || textBoxBillPrice.Text == null)
             {
                 MessageBox.Show("Bitte alle Felder ausfüllen");
                 return;

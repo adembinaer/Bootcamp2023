@@ -53,7 +53,7 @@ namespace ProNatura_BioLädeli_GmbH
             this.textBoxBillName.Location = new System.Drawing.Point(153, 33);
             this.textBoxBillName.Name = "textBoxBillName";
             this.textBoxBillName.Size = new System.Drawing.Size(205, 22);
-            this.textBoxBillName.TabIndex = 0;
+            this.textBoxBillName.TabIndex = 1;
             // 
             // textBoxBillText
             // 
