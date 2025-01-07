@@ -11,5 +11,10 @@ namespace OOP_Bespiel
         public float BreakSpead { get; set; }
 
         public int DoorCount { get; set; }
+
+        public void LogInformation()
+        {
+            Console.WriteLine("Das Fahrzeug fährt mit" + Speed + "Km/h.");
+        }
     }
 }

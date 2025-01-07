@@ -6,6 +6,6 @@ namespace OOP_Bespiel
 {
     class Plane : Vehicle
     {
-
+        public bool HasJetDrive { get; set; }
     }
 }
