@@ -18,14 +18,14 @@ namespace OOP_Bespiel
             };
             car.LogInformation();
 
-            Plane plane = new Plane()
-            {
-                Acceleration = 500,
-                DoorCount = 8,
-                BreakSpead = 200,
-                Speed = 700,
-                HasJetDrive = true
-            };
+            Plane plane = new Plane();
+            plane.Acceleration = 50;
+            plane.DoorCount = 8;
+            plane.BreakSpead = 200;
+            plane.Speed = 750;
+            plane.HasJetDrive = true;
+
+
             plane.LogInformation();
         }
     }
