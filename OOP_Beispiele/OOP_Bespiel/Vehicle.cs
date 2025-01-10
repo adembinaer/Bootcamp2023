@@ -14,7 +14,7 @@ namespace OOP_Bespiel
 
         public void LogInformation()
         {
-            Console.WriteLine("Das Fahrzeug fährt mit" + Speed + "Km/h.");
+            Console.WriteLine("Das Fahrzeug fährt mit " + Speed + "Km/h.");
         }
     }
 }

@@ -8,9 +8,14 @@ namespace OOP_Bespiel
     {
         public bool HasJetDrive { get; set; }
 
-        public void Move()
+        public virtual void Move()
         {
-            Console.WriteLine("Die Räder am Boden sind rollbereit und haben Bodenkontakt.\n Die Räder in der Luft sind eingeklappt.");
+            Console.WriteLine("Die Räder am Boden sind rollbereit und haben Bodenkontakt.\nDie Räder in der Luft sind eingeklappt.");
+        }
+
+        public virtual void Landing()
+        {
+            Console.WriteLine("Landeanflug beginnt mit Passagieren");
         }
     }
 }
