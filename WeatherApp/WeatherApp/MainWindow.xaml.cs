@@ -30,7 +30,7 @@ namespace WeatherApp
         {
             InitializeComponent();
 
-            UpadateData("Sarajevo");
+            UpadateData("Widnau");
 
             //WeatherMapResponse result = GetWeatherData("Berlin");
             ////result. ...... 

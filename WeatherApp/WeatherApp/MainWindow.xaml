@@ -161,7 +161,7 @@
         </Label>
 
         <Border Grid.Column="1" Grid.ColumnSpan="2" Padding="5" CornerRadius="25" BorderThickness="1" Background="White" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
-            <TextBox Style="{DynamicResource TextBoxStyle1}" x:Name="textBoxQuery" Text="Sarajevo" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="27" FontWeight="Bold" BorderBrush="#FFFAFAFB" AllowDrop="True"/>
+            <TextBox Style="{DynamicResource TextBoxStyle1}" x:Name="textBoxQuery" Text="Widnau" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="27" FontWeight="Bold" BorderBrush="#FFFAFAFB" AllowDrop="True"/>
         </Border>
         <Border Grid.Column="4" Padding="5" CornerRadius="10" BorderThickness="1" Background="White" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Button Click="Button_Click" Style="{DynamicResource ButtonStyle1}" Cursor="Hand" Background="Transparent" BorderThickness="0" Content="Update" FontSize="25" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
